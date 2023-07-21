@@ -7,6 +7,7 @@ import { Montserrat } from "next/font/google";
 
 // cn library
 import { cn } from "@/lib/utils";
+import { LayoutDashboard } from "lucide-react";
 
 // font Montserrat using import
 // and append to title
@@ -14,6 +15,18 @@ const montserrat = Montserrat ({
     weight: "600",
     subsets: ["latin"]
 });
+
+// Create an array to hold all routes before rendering routes
+// array created that holds objects
+const routes = [
+    {
+        label: "Dashboard",
+        icon: LayoutDashboard,
+        href: "/dashboard",
+        color: "text-sky-500",
+    },
+];
+
 
 // Sidebar styling and logo positioning
 const Sidebar =() => {
@@ -35,7 +48,25 @@ const Sidebar =() => {
                         Genius
                     </h1>
                 </Link>
-
+                    <div className="space-y-1">
+                        {routes.map((route) => (
+                            <Link
+                                href={route.href}
+                                key={route.href}
+                                // styling with opacity and hover effect for each route
+                                className="text-sm group flex p-3 w-full
+                                justify-start font-medium cursor-pointer
+                                hover: text-white hover:bg-white/10 rounded-lg
+                                transition"
+                            >
+                                <div className="flex items-center flex-1">
+                                    <route.icon className={cn("h-5 w-5 mr-3", 
+                                    route.color)} />
+                                    {route.label}
+                                </div>
+                            </Link>                        
+                        ))} 
+                    </div>
             </div>
         </div>
     );
