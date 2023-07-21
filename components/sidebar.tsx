@@ -7,7 +7,16 @@ import { Montserrat } from "next/font/google";
 
 // cn library
 import { cn } from "@/lib/utils";
-import { LayoutDashboard } from "lucide-react";
+import {
+    Code,
+    ImageIcon,
+    LayoutDashboard,
+    MessageSquare,
+    Music,
+    Settings,
+    VideoIcon,
+} from "lucide-react";
+
 
 // font Montserrat using import
 // and append to title
@@ -19,16 +28,58 @@ const montserrat = Montserrat ({
 // Create an array to hold all routes before rendering routes
 // array created that holds objects
 const routes = [
+    // Dashboard route
     {
         label: "Dashboard",
         icon: LayoutDashboard,
         href: "/dashboard",
         color: "text-sky-500",
     },
+    // Conversation route
+    {
+        label: "Conversation",
+        icon: MessageSquare,
+        href: "/conversation",
+        color: "text-violet-500",
+    },
+    // Image Generation route
+    {
+        label: "Image Generation",
+        icon: ImageIcon,
+        href: "/image",
+        color: "text-pink-700",
+    },
+    // Video Generation route
+    {
+        label: "Video Generation",
+        icon: VideoIcon,
+        href: "/video",
+        color: "text-orange-700",
+    },
+    // Music Generation route
+    {
+        label: "Music Generation",
+        icon: Music,
+        href: "/music",
+        color: "text-emerald-500",
+    },
+    // Code Generation route
+    {
+        label: "Code Generation",
+        icon: Code,
+        href: "/code",
+        color: "text-green-700",
+    },
+    // Settings route
+    {
+        label: "Settings",
+        icon: Settings,
+        href: "/settings",
+    },
 ];
 
 
-// Sidebar styling and logo positioning
+// sidebar styling and logo positioning
 const Sidebar =() => {
     return (
         <div className="space-y-4 py-4 flex flex-col h-full
