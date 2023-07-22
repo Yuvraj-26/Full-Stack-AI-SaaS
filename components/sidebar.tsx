@@ -112,7 +112,6 @@ const Sidebar =() => {
                                 // dynamic class name allows text white style else xinc
                                 pathname == route.href ? "text-white bg-white/10" : "text-zinc-400"
                                 )}
-                                
                             >
                                 <div className="flex items-center flex-1">
                                     <route.icon className={cn("h-5 w-5 mr-3", 
