@@ -9,8 +9,21 @@ import {
     SheetTrigger 
 } from "@/components/ui/sheet";
 import Sidebar from "@/components/sidebar";
+import { useEffect, useState } from "react";
 
+// Mobile sidebar component
 const MobileSidebar = () => {
+    // debugging hydration errors by fixing rendering method
+    const [isMounted, setIsMounted] = useState(false);
+    // useState and useEffect imported libraries
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) {
+        return null;
+    }
+
     return (
         <Sheet>
             <SheetTrigger>
