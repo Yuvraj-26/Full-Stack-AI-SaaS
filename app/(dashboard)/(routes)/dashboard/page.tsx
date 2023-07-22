@@ -6,7 +6,7 @@ import {
   ImageIcon,
   MessageSquare,
   Music,
-  VideoIcon
+  VideoIcon,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -50,7 +50,7 @@ const tools = [
     color: "text-green-700",
     bgColor: "bg-green-700/10",
     href: "/code"
-  },
+  }
 ]
 
 // Dashboard page
@@ -70,7 +70,7 @@ const DashboardPage = () => {
         {tools.map((tool) => (
           <Card
           onClick={() => router.push(tool.href)}
-          key={(tool.href)}
+          key={tool.href}
           className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
           >
             <div className="flex items-center gap-x-4">
