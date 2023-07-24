@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
+import { useState } from "react";
 
 import { Heading } from "@/components/heading";
 
@@ -19,9 +20,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Empty } from "@/components/empty";
+import { Loader } from "@/components/loader";
+import { cn } from "@/lib/utils";
 
 import { formSchema } from "./constants";
-import { useState } from "react";
 
 
 
@@ -51,11 +54,11 @@ const ConversationPage = () => {
       const response = await axios.post("/api/conversation", {
         messages: newMessages,
       });
-      
+
       setMessages((current) => [...current, userMessage, response.data]);
 
       form.reset();
-    } catch (error:any) {
+    } catch (error: any) {
       // TODO: Open Pro Modal
       console.log(error);
     } finally {
@@ -112,9 +115,23 @@ const ConversationPage = () => {
           </Form>
         </div>
         <div className="space-y-4 mt-4">
+          {isLoading && (
+            <div className="p-8 rounded-lg w-full flex items-center justify-center bg-muted">
+              <Loader />
+            </div>
+          )}
+          {messages.length === 0 && !isLoading && (
+            <Empty label="No conversation started." />
+          )}
           <div className="flex flex-col-reverse gap-y-4">
             {messages.map((message) => (
-              <div key={message.content}>
+              <div
+                key={message.content}
+                className={cn(
+                  "p-8 w-full flex items-start gap-x-8 rounded-lg",
+                  message.role === "user" ? "bg-white border border-black/10" : "bg-muted"
+                )}
+              >
                 {message.content}
               </div>
             ))}
