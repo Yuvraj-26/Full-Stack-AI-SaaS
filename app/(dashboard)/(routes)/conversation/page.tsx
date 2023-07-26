@@ -25,11 +25,14 @@ import { Loader } from "@/components/loader";
 import { UserAvatar } from "@/components/user-avatar";
 import { BotAvatar } from "@/components/bot-avatar";
 import { cn } from "@/lib/utils";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";
 
 
+
 const ConversationPage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -60,8 +63,12 @@ const ConversationPage = () => {
 
       form.reset();
     } catch (error: any) {
-      // TODO: Open Pro Modal
-      console.log(error);
+      //  Open Pro Modal
+      // check if error is 403 as we require to open pro modal
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
+
       // finally block: router.refresh 
       // Making a new request to the server, re-fetching data requests (from db), 
       // and re-rendering Server Components. The client will merge the updated 
