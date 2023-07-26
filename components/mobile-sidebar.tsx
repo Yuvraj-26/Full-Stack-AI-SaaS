@@ -6,13 +6,19 @@ import { Button } from "@/components/ui/button";
 import {
     Sheet,
     SheetContent,
-    SheetTrigger 
+    SheetTrigger
 } from "@/components/ui/sheet";
 import Sidebar from "@/components/sidebar";
 import { useEffect, useState } from "react";
 
+interface MobileSidebarProps {
+    apiLimitCount: number;
+}
+
 // Mobile sidebar component
-const MobileSidebar = () => {
+const MobileSidebar = ({
+    apiLimitCount
+}: MobileSidebarProps) => {
     // debugging hydration errors by fixing rendering method
     const [isMounted, setIsMounted] = useState(false);
     // useState and useEffect imported libraries
@@ -29,10 +35,10 @@ const MobileSidebar = () => {
             <SheetTrigger>
                 <Button variant="ghost" size="icon" className="md:hidden">
                     <Menu />
-                </Button>           
+                </Button>
             </SheetTrigger>
             <SheetContent side="left" className="p-0">
-                <Sidebar />
+                <Sidebar apiLimitCount={apiLimitCount} />
             </SheetContent>
         </Sheet>
     );
