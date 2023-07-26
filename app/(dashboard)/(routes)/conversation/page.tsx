@@ -62,6 +62,10 @@ const ConversationPage = () => {
     } catch (error: any) {
       // TODO: Open Pro Modal
       console.log(error);
+      // finally block: router.refresh 
+      // Making a new request to the server, re-fetching data requests (from db), 
+      // and re-rendering Server Components. The client will merge the updated 
+      // React Server Component payload without losing unaffected client-side React
     } finally {
       router.refresh();
     }
