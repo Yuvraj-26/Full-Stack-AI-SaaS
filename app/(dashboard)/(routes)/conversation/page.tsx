@@ -9,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { ChatCompletionRequestMessage } from "openai";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 import { Heading } from "@/components/heading";
 
@@ -28,6 +29,7 @@ import { cn } from "@/lib/utils";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";
+
 
 
 
@@ -67,6 +69,9 @@ const ConversationPage = () => {
       // check if error is 403 as we require to open pro modal
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        // error handling
+        toast.error("Something went wrong");
       }
 
       // finally block: router.refresh 

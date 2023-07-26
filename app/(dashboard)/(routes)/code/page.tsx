@@ -29,6 +29,7 @@ import { cn } from "@/lib/utils";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";
+import { toast } from "react-hot-toast";
 
 const CodePage = () => {
   const proModal = useProModal();
@@ -66,6 +67,9 @@ const CodePage = () => {
       // check if error is 403 as we require to open pro modal
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        // error handling
+        toast.error("Something went wrong");
       }
     } finally {
       router.refresh();

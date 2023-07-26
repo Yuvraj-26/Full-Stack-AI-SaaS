@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 import Image from "next/image";
 
 import {
@@ -39,6 +40,7 @@ import {
   formSchema,
   resolutionOptions
 } from "./constants";
+
 
 
 const ImagePage = () => {
@@ -75,6 +77,9 @@ const ImagePage = () => {
       // check if error is 403 as we require to open pro modal
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        // error handling
+        toast.error("Something went wrong");
       }
     } finally {
       router.refresh();
