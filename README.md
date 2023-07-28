@@ -56,17 +56,17 @@ Video generation          |  Code generation
 - Ability to manage - upgrade, remove subscription
 - Free tier with API limiting
 
-Free Tier          |  Pro Tier
+Upgrade Free Tier          |  Pro Tier
 :-------------------------:|:-------------------------:
-<img src="docs/3.png">  |  <img src="docs/4.png">
+<img src="docs/4.png">  |  <img src="docs/7.png">
 
 - POST, DELETE, GET routes in route handlers
 - Fetch data in server react components by directly accessing database without API
 - Integrating messaging platform for clients using Crisp Chat
 
-App-wide asistance          |  Crisp Chat
+Image Generation          |  App-wide assistance via Crisp Chat
 :-------------------------:|:-------------------------:
-<img src="docs/1.png">  |  <img src="docs/6.png">
+<img src="docs/9.png">  |  <img src="docs/6.png">
 
 
 ## Prerequisites
