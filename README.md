@@ -8,7 +8,7 @@ Aim: Develop a full stack buld of an SaaS AI Platform with Next.js 13, React, Ta
 
 ## Deployment Link
 
-https://full-stack-ai-saas.vercel.app/
+https://full-stack-saas-ai.vercel.app/
 
 Note: Some compelx AI generation request may timeout, displaying "Something went wrong"
 
