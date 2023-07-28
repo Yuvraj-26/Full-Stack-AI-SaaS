@@ -27,7 +27,6 @@ Vercel AI SDK with the Edge Network, providing faster generation and content str
 - Crisp Messaging Platform
 - Clerk
 
-
 ## Features:
 - Tailwind design
 - Tailwind animations and effects
@@ -61,8 +60,6 @@ Free Tier          |  Pro Tier
 :-------------------------:|:-------------------------:
 <img src="docs/3.png">  |  <img src="docs/4.png">
 
-
-
 - POST, DELETE, GET routes in route handlers
 - Fetch data in server react components by directly accessing database without API
 - Integrating messaging platform for clients using Crisp Chat
@@ -79,7 +76,7 @@ App-wide asistance          |  Crisp Chat
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/Yuvraj-26/Full-Stack-AI-SaaS-with-Next.js-13.git
+git clone https://github.com/Yuvraj-26/Full-Stack-AI-SaaS.git
 ```
 
 ### Install packages
@@ -88,8 +85,25 @@ git clone https://github.com/Yuvraj-26/Full-Stack-AI-SaaS-with-Next.js-13.git
 npm i
 ```
 
-### Setup .env file
+## Clerk 
+- Create Application for Next.js
+- Copy Clerk credentials
 
+## OpenAI nad ReplicateAI
+- Copy OpenAI API key and ReplicateAI API token
+
+## Stripe 
+- Copy Stripe secret key
+- Download Stripe CLI
+- Stripe login and match pairing code using:
+```shell
+stripe login
+```
+- forward events to the webhook and copy webhook signing secret using:
+```shell
+stripe listen --forward-to localhost:3000/api/webhook
+```
+### Setup .env file
 
 ```js
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
@@ -113,10 +127,15 @@ NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
 ### Setup Prisma
 
-Add MySQL Database (I used PlanetScale)
+Add MySQL Database (PlanetScale)
 
 ```shell
 npx prisma db push
+npx prisma generate
+
+// to reset the database
+npx prisma migrate reset
+
 
 ```
 
@@ -137,7 +156,6 @@ Running commands with npm `npm run [command]`
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
 | `lint`          | Checks code for errors and warnings |
-
 
 
 ## Deploy on Vercel
