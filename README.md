@@ -64,7 +64,7 @@ Upgrade Free Tier          |  Pro Tier
 - Fetch data in server react components by directly accessing database without API
 - Integrating messaging platform for clients using Crisp Chat
 
-Image Generation          |  App-wide assistance via Crisp Chat
+Image Generation          |  App-wide assistance via Crisp
 :-------------------------:|:-------------------------:
 <img src="docs/9.png">  |  <img src="docs/6.png">
 
