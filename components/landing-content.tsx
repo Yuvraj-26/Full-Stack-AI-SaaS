@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const testimonials = [
   {
     name: "Emma",
-    avatar: "R",
+    avatar: "E",
     title: "Designer",
     description: "I can confidently say it has enhanced my productivity, effortlessly handling tasks and delivering lightning-fast, precise answers to all my queries.",
   },
@@ -13,7 +13,7 @@ const testimonials = [
     name: "Antonio",
     avatar: "A",
     title: "Software Engineer",
-    description: "As a programmer, this code generating tool has become my go-to solution, saving me countless hours of manual coding by intelligently generating efficient and reliable code tailored to my specific needs.",
+    description: "As a developer, this code generating tool has become my go-to solution, saving me countless hours of manual coding by intelligently generating efficient and reliable code tailored to my specific needs.",
   },
   {
     name: "Manny",

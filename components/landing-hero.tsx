@@ -30,7 +30,7 @@ export const LandingHero = () => {
         </div>
       </div>
       <div className="text-sm md:text-xl font-light text-zinc-400">
-        Create content using AI 10x faster.
+        Accelerate your content creation process by 10x with AI.
       </div>
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
