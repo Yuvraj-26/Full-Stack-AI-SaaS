@@ -32,23 +32,26 @@ this will be resolved using Vercel AI SDK with the Edge Network, providing faste
 - Tailwind design
 - Tailwind animations and effects
 - Full responsiveness
-  <img src="docs/1.png">
-
-
-- Clerk Authentication (Email, Google, 9+ Social Logins)
+  <img src="docs/3.png">
+- Clerk Authentication (Email, Google, and Social Logins)
 - Client form validation and handling using react-hook-form
 - Server error handling using react-toast
-- Image Generation Tool (Open AI)
-- Video Generation Tool (Replicate AI)
-- Conversation Generation Tool (Open AI)
-- Music Generation Tool (Replicate AI)
+- Image Generation Tool (OpenAI)
+- Video Generation Tool (ReplicateAI)
+  <img src="docs/5.png">
+- Conversation Generation Tool (OpenAI)
+- Music Generation Tool (ReplicateAI)
+- Code Generation Tool (OpenAI)
+  <img src="docs/2.png">
 - Page loading state
 - Stripe monthly subscription
 - Free tier with API limiting
-- How to write POST, DELETE, and GET routes in route handlers (app/api)
-- How to fetch data in server react components by directly accessing database (WITHOUT API! like Magic!)
-- How to handle relations between Server and Child components!
-- How to reuse layouts
+  <img src="docs/2.png">
+- POST, DELETE, GET routes in route handlers
+- Fetch data in server react components by directly accessing database without API
+- Integrating messaging platform for clients using Crisp Chat
+  <img src="docs/6.png">
+
 
 ## Prerequisites
 
