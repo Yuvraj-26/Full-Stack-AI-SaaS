@@ -2,8 +2,6 @@
 
 <img src="docs/1.png">
 
-<img src="docs/0.png">
-
 ## Introduction
 
 Aim: Develop a full stack buld of an SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe
@@ -32,21 +30,35 @@ this will be resolved using Vercel AI SDK with the Edge Network, providing faste
 - Tailwind design
 - Tailwind animations and effects
 - Full responsiveness
-  <img src="docs/3.png">
+
+Web          |  Mobile sidebar
+:-------------------------:|:-------------------------:
+<img src="docs/0.png">  |  <img src="docs/3.png">
+
 - Clerk Authentication (Email, Google, and Social Logins)
 - Client form validation and handling using react-hook-form
 - Server error handling using react-toast
 - Image Generation Tool (OpenAI)
 - Video Generation Tool (ReplicateAI)
-  <img src="docs/5.png">
 - Conversation Generation Tool (OpenAI)
 - Music Generation Tool (ReplicateAI)
 - Code Generation Tool (OpenAI)
-  <img src="docs/2.png">
+
+Video generation          |  Code generation
+:-------------------------:|:-------------------------:
+<img src="docs/5.png">  |  <img src="docs/2.png">
+
+
 - Page loading state
 - Stripe monthly subscription
 - Free tier with API limiting
-  <img src="docs/2.png">
+
+Video generation          |  Code generation
+:-------------------------:|:-------------------------:
+<img src="docs/3.png">  |  <img src="docs/4.png">
+
+
+
 - POST, DELETE, GET routes in route handlers
 - Fetch data in server react components by directly accessing database without API
 - Integrating messaging platform for clients using Crisp Chat
