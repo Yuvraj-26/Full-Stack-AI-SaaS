@@ -1,20 +1,40 @@
 # Full Stack SaaS AI Platform with Next.js 13
 
-## Deployment
+<img src="docs/1.png">
 
-https://full-stack-saas-ai.vercel.app
+<img src="docs/0.png">
+
+## Introduction
+
+Aim: Develop a full stack buld of an SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe
+
+## Deployment Link
+
+https://full-stack-ai-saas.vercel.app/
 
 Note: Some compelx AI generation request may timeout due to timeout set by API routes,
-this will be resolved using Vercel AI SDK with the Edge Network, 
-which is generally faster and supprts content streaming
+this will be resolved using Vercel AI SDK with the Edge Network, providing faster  generation and content streaming suppoort
 
-This is a repository for a full stack buld of an SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe
+## Technology Used
+- TSX | Typescript | Javascript 
+- React
+- Tailwind (shadcn/ui) CSS
+- PlanetScale DB Platform
+- OpenAI
+- ReplicateAI 
+- Prisma
+- Stripe
+- Crisp Messaging Platform
+- Clerk
 
-Features:
 
+##Features:
 - Tailwind design
 - Tailwind animations and effects
 - Full responsiveness
+  <img src="docs/1.png">
+
+
 - Clerk Authentication (Email, Google, 9+ Social Logins)
 - Client form validation and handling using react-hook-form
 - Server error handling using react-toast
@@ -30,7 +50,7 @@ Features:
 - How to handle relations between Server and Child components!
 - How to reuse layouts
 
-### Prerequisites
+## Prerequisites
 
 **Node version 18.x.x**
 
@@ -94,6 +114,7 @@ Running commands with npm `npm run [command]`
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
+| `lint`          | Checks code for errors and warnings |
 
 
 
