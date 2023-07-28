@@ -1,5 +1,13 @@
 # Full Stack SaaS AI Platform with Next.js 13
 
+## Deployment
+
+https://full-stack-ai-saas.vercel.app/
+
+Note: Some compelx AI generation request may timeout due to timeout set by API routes,
+this will be resolved using Vercel AI SDK with the Edge Network, 
+which is generally faster and supprts content streaming
+
 This is a repository for a full stack buld of an SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe
 
 Features:
