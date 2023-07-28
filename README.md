@@ -10,8 +10,10 @@ Aim: Develop a full stack buld of an SaaS AI Platform with Next.js 13, React, Ta
 
 https://full-stack-ai-saas.vercel.app/
 
-Note: Some compelx AI generation request may timeout due to timeout set by API routes,
-this will be resolved using Vercel AI SDK with the Edge Network, providing faster  generation and content streaming suppoort
+Note: Some compelx AI generation request may timeout, displaying "Something went wrong"
+
+This is due to the timeout set by API routes, and will be will be resolved shortly using 
+Vercel AI SDK with the Edge Network, providing faster generation and content streaming suppoort
 
 ## Technology Used
 - TSX | Typescript | Javascript 
@@ -26,7 +28,7 @@ this will be resolved using Vercel AI SDK with the Edge Network, providing faste
 - Clerk
 
 
-##Features:
+## Features:
 - Tailwind design
 - Tailwind animations and effects
 - Full responsiveness
@@ -51,9 +53,11 @@ Video generation          |  Code generation
 
 - Page loading state
 - Stripe monthly subscription
+- Ability to upgrade from free tier to pro plan with unlimited generations/usage
+- Ability to manage - upgrade, remove subscription
 - Free tier with API limiting
 
-Video generation          |  Code generation
+Free Tier          |  Pro Tier
 :-------------------------:|:-------------------------:
 <img src="docs/3.png">  |  <img src="docs/4.png">
 
@@ -62,7 +66,10 @@ Video generation          |  Code generation
 - POST, DELETE, GET routes in route handlers
 - Fetch data in server react components by directly accessing database without API
 - Integrating messaging platform for clients using Crisp Chat
-  <img src="docs/6.png">
+
+App-wide asistance          |  Crisp Chat
+:-------------------------:|:-------------------------:
+<img src="docs/1.png">  |  <img src="docs/6.png">
 
 
 ## Prerequisites
