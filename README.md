@@ -139,7 +139,7 @@ npx prisma migrate reset
 
 ```
 
-## Start the app
+## Start the App
 
 ```shell
 npm run dev
