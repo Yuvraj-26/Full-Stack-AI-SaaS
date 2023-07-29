@@ -6,7 +6,7 @@
 
 Aim: Develop a full stack buld of an SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe
 
-## Deployment Link: Try the APP youself
+## Deployment Link: Try the Application yourself
 
 https://full-stack-saas-ai.vercel.app/
 
