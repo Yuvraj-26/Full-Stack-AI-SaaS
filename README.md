@@ -54,7 +54,7 @@ Video generation          |  Code generation
 - Stripe monthly subscription
 - Ability to upgrade from free tier to pro plan with unlimited generations/usage
 - Ability to manage - upgrade, remove subscription
-- Free tier with API limiting
+- Free tier with API limiting (5 free generations)
 
 Upgrade Free Tier          |  Pro Tier
 :-------------------------:|:-------------------------:
@@ -103,7 +103,7 @@ stripe login
 ```shell
 stripe listen --forward-to localhost:3000/api/webhook
 ```
-### Setup .env file
+## Setup .env file
 
 ```js
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
@@ -125,7 +125,7 @@ STRIPE_WEBHOOK_SECRET=
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
 
-### Setup Prisma
+## Setup Prisma
 
 Add MySQL Database (PlanetScale)
 
@@ -139,7 +139,7 @@ npx prisma migrate reset
 
 ```
 
-### Start the app
+## Start the app
 
 ```shell
 npm run dev
